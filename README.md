@@ -1,8 +1,5 @@
 # USAL-TheRealCodeWars
 
-## Demo
-The video TheRealCodeWars - Demo has a demonstration of the project. There are some things that the recording program did not capture such as the lists options or the file explorer to upload a file.
-
 ## Installation
 Make sure you have Msys2 installed on windows, also install the packages (needed)
 ```
