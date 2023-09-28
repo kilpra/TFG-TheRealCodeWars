@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Registrarse</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body class="img js-fullheight" style="background-color: #8cecff;">
+	<section class="ftco-section">
+		<div class="container">
+			<div class="container navbar">
+				<a class="navbar-brand" href="/">Home</a>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section"></h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-4">
+					<div class="login-wrap p-0">
+				<h3 class="mb-4 text-center">Registrarse</h3>
+				<form class="signin-form" method="POST" onsubmit="return validarFormulario()">
+					<div class="form-group">
+						<input title="No se permiten caracteres especiales ni espacios" type="text" class="form-control" id="username" name="username" placeholder="Usuario" autocomplete="on" minlength="4" maxlength="10" pattern="[a-zA-Z0-9]+" required>
+					</div>
+					<div class="form-group">
+						<input id="password-field" type="password" name="password" class="form-control" placeholder="Contraseña" minlength="4" maxlength="20" required>
+						<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+                    <div class="form-group">
+                        <input type="password" id="passwordRep" class="form-control" placeholder="Confirma la Contraseña" required/>
+						<span toggle="#passwordRep" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="form-control btn btn-primary submit px-3">Registrarse</button>
+					</div>
+					<p class="text-center text-muted mt-5 mb-0" style="color: #fff;">Ya tienes una cuenta? <a href="/login"
+						class="fw-bold text-body"><u>Inicia sesión aquí</u></a></p>
+				</form>
+			</div>
+		</div>
+	</section>
+
+	<script src="/javaScript/js/jquery.min.js"></script>
+	<script src="/javaScript/js/popper.js"></script>
+	<script src="/javaScript/js/bootstrap.min.js"></script>
+	<script src="/javaScript/js/main.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/js-sha256/0.9.0/sha256.min.js"></script>
+    <script src="javaScript/register.js"></script>
+</body>
+<style>
+</style>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>TheRealCodeWars - Tutorial</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <style>
+            .list-group {
+                padding: 1vh;
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Page Top</a>
+                <a class="navbar-brand" href="/home">Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="#TRCW">El juego</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#code">Como crear un bot</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#upload">Como subir código</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#create">Como crear una partida</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container">
+                <div class="masthead-heading text-uppercase"><h1>Antes de empezar a programar, descarga nuestra biblioteca en Python y un bot de ejemplo!</h1></div>
+                <a class="btn btn-primary btn-x2" href="/RealCodeWars.py" download>Biblioteca</a>
+                <a class="btn btn-primary btn-x2" href="/ExampleBot.py" download>Bot</a>
+            </div>
+        </header>
+        <!-- TheGame-->
+        <section class="page-section" id="TRCW">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">El juego</h2>
+                </div>
+                <div class="text-left">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="container">
+                                The Real Code Wars es un juego por turnos en el que dos participantes competirán por ser el primero en destruir la base del contrario. <br> <br>
+                                Antes de iniciar la partida, será necesario crear un bot que definirá las acciones de los soldados, subir ese bot y, finalmente,
+                                 un jugador elegirá el número de rondas, el mapa, los 2 participantes de la partida y los bots que usarán. <br>
+                                Una vez establecidos estos parámetros, puede comenzar la batalla. Si al finalizar las rondas, ninguna base ha sido destruida, el equipo ganador será aquel cuya base mantenga más vida. <br>                
+                                <div class="container">
+                                    <br>Sobre el mapa se encontrarán 4 tipos de soldados y la base :
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <b>•	Attacker</b> <img src="/images/attacker.png" style="padding: 1em; object-fit: cover; width: 7em;height: 6em"> <br>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        • 10 puntos de ataque.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 10 puntos de vida.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 3 acciones por turno.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 4 casillas de alcance de visón.
+                                                    </li>                                                 
+                                                </ul>
+                                            <li class="list-group-item">
+                                                <b>•	Tank</b> <img src="/images/tank.png" style="padding: 1em; object-fit: cover; width: 7em;height: 6em"> <br>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        • 5 puntos de ataque.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 25 puntos de vida.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 1 acciones por turno.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 2 casillas de alcance de visón.
+                                                    </li>                                                 
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>•	Helicopter</b> <img src="/images/helicopter.png" style="padding: 1em; object-fit: cover; width: 6em;height: 6em"> <br>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        • 6 puntos de ataque.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 15 puntos de vida.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 2 acciones por turno.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 3 casillas de alcance de visón.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • Puede volar.
+                                                    </li>                                                    
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>•	Healer</b> <img src="/images/healer.png" style="padding: 1em; object-fit: cover; width: 6em;height: 7em">
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        • 0 puntos de ataque.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 5 puntos de curación.
+                                                    </li>                                                
+                                                    <li class="list-group-item">
+                                                        • 10 puntos de vida.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 2 acciones por turno.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 2 casillas de alcance de visón.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • Puede nadar.
+                                                    </li>                                                 
+                                                </ul>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>•	Base</b> <img src="/images/base.png" style="padding: 1em; object-fit: cover; width: 6em;height: 6em"> <br>
+                                                La base es estática y carece de poder de ataque, siendo su función crear soldados en las 4 casillas contiguas a su localización <br>
+                                                <ul class="list-group">
+                                                    <li class="list-group-item">
+                                                        • 500 puntos de vida.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 1 acción por turno.
+                                                    </li>
+                                                    <li class="list-group-item">
+                                                        • 1 casilla de alcance de visón.
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    <br>El mapa o tablero se compone de 400 casillas (20 x 20). Existen tres tipos :
+                                        <ul class="list-group">
+                                            <li class="list-group-item">
+                                                <b>•	Agua</b> <img src="/images/water.png" style="padding: 1em; object-fit: cover; width: 5em;height: 5em"> <br> Imposibilita el paso a aquellos soldados que no puedan nadar o volar. 
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>•	Lava</b> <img src="/images/lava.png" style="padding: 1em; object-fit: cover;width: 5em;height: 5em"> <br> Imposibilita el paso a aquellos soldados que no puedan volar.
+                                            </li>
+                                            <li class="list-group-item">
+                                                <b>•	Tierra</b> <img src="/images/earth.png" style="padding: 1em; object-fit: cover;width: 5em;height: 5em"> <br> Permite el paso a todos los soldados.                                            </li>
+                                        </ul>
+                                    <br>Los soldados pueden realizar distintas acciones :
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <b>•	Mover</b>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    • El soldado avanzará 1 casilla en la dirección indicada.
+                                                </li>
+                                                <li class="list-group-item">
+                                                    • Consume 1 acción.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>•	Atacar</b>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    • El soldado atacará la posición indicada. Esta tiene que estar en su rango de visión.
+                                                </li>
+                                                <li class="list-group-item">
+                                                    • Consume 1 acción.
+                                                </li>
+                                            </ul>                                            
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>•	Curar</b>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    • El soldado curará la posición indicada. Esta tiene que estar en su rango de visión.
+                                                </li>
+                                                <li class="list-group-item">
+                                                    • Consume 1 acción.
+                                                </li>
+                                            </ul>                                            
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>•	Crear</b>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    • Esta acción sólo está disponible para la base. Esta será capaz de crear nuevos soldados del tipo indicado en una de sus 4 casillas adyacentes, siempre que estén libres.
+                                                </li>
+                                                <li class="list-group-item">
+                                                    • Consume 1 acción.
+                                                </li>
+                                            </ul>                                            
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>•   Ver casillas al alcance de visión</b>
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    • El soldado puede obtener la información de las casillas en su rango de visión y si están ocupadas por enemigos o aliados.
+                                                </li>
+                                                <li class="list-group-item">
+                                                    • No consume ninguna acción.
+                                                </li>
+                                            </ul>                                            
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Admin code-->
+        <section class="page-section" id="code">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Como crear un bot</h2>
+                </div>
+                <div class="text-left">
+                    <div class="container">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <div class="container">
+                                    Una vez conocido el objetivo y elementos principales del juego, el siguiente paso consistirá en crear un bot. <br>
+                                    Para ello, es necesario descargar la biblioteca situada en el inicio de la página e importarla al principio del código. Esta contiene distintas clases y funciones que facilitarán la creación del bot. Existen tres clases : <br>
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><b>Tile</b>
+                                            <div class="container">
+                                                Esta clase representa las casillas del mapa y cuenta con atributos útiles para las mismas (posX, posY, occupied, enemy, type).<br>
+                                                'posX' y 'posY' son las coordenadas de la casilla, 'occupied' indica si está ocupada, 'enemy' si es un enemigo quien la ocupa o no y 'type' el tipo (agua, lava, tierra).<br>
+                                                Se recomienda prestar atención especialmente en los atributos de 'type' y 'enemy', dado que será necesario controlar, por ejemplo, que un tanque no intente caer en la lava, causando así la pérdida del turno, aunque no del tanque.   
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item"><b>Soldier</b>
+                                            <div class="container">
+                                                Esta clase representa los soldados. <br>
+                                                Sus atributos son: 'name', 'swims', 'flies', 'range', 'attack', 'healingPoints', 'health', 'maxHealth', 'team', 'index', 'posX', 'posY' y 'actionsRemaining'. <br>
+                                                El propio nombre de cada atributo indica su función. <br>
+                                                El campo de 'range' indica la distancia de visión del Soldado, esto afectará a las casillas que verá a su alrededor al utilizar el método 'RCW_getTiles' <br>
+                                                El campo de 'index' es para el funcionamiento interno del juego. 
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item"><b>RCW</b>
+                                            <div class="container">
+                                                Es la clase principal, en ella se encuentran funciones que permiten ejecutar acciones con el soldado que se le pase como argumento. <br>
+                                                Solo es importante un atributo de esta clase para el bot, siendo este 'enemy_base', que como su propio nombre indica, contiene las coordenadas de la base enemiga. <br>
+                                                En la propia biblioteca viene documentado lo que hace cada función. <br>
+                                                El trabajo principal consistirá en sobreescribir la función de 'RCW_turn', la cual llamará la biblioteca en cada turno pasándole un array con todos tus soldados vivos.<br><br>
+                                                Al inicio de la página se encuentra un ejemplo de código de un bot sencillo que se puede descargar. <br>
+                                                En él, se hace un 'for' para iterar sobre cada soldado y que ejecuten unas acciones dependiendo de su nombre y las casillas en su rango (las casillas o tiles en rango de un soldado se obtienen mediante la función 'RCW_getTiles'). <br>
+                                                Es muy importante llamar a la función 'RCW_end_turn' al acabar tu turno. Si esto no se hace, el bot se quedará bloqueado.
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+            </div>
+        </section>
+        <!-- Watch-->
+        <section class="page-section" id="upload">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Como subir el código del bot</h2>
+                </div>
+                <div class="text-left">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="container">
+                                Una vez creado el bot, el siguiente paso consistirá en subirlo a The Real Code Wars. <br>
+                                Para ello, se podrá acceder a <a href="/code">administrar tu código</a> desde la página de inicio. Solo se permitirá la subida de archivos .py. Una vez subidos, es posible su visualización o eliminación desde la misma página.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Create-->
+        <section class="page-section" id="create">
+            <div class="container">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Como crear una partida</h2>
+                </div>
+                <div class="text-left">
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="container">
+                                Para crear una partida, se podrá acceder a <a href="/createGame">Crea una Partida</a> desde la página de inicio. Allí se deberá elegir a los usuarios y código que se quiera usar, los mapas y las rondas. Solo se podrá ejecutar una partida a la vez.
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="container">
+                                Si se quiere probar un bot, se proporcionan 3 bots ya creados en el usuario "Example". Estos bots son:
+                            </div>
+                            <div class="container">
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <b>BlockedBot:</b> Podrás probar tu código con un oponente inmóvil.
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>ExampleBot:</b> Se trata del bot proporcionado como ejemplo en el tutorial. Se mueve a posiciones aleatorias y no comprueba si puede hacer las acciones, perdiendo así la mayoría de turnos.
+                                    </li>
+                                    <li class="list-group-item">
+                                        <b>HarderBot:</b> Busca el camino más corto a la base enemiga, siempre comprueba si sus acciones pueden realizarse.
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="/javaScript/scriptsIndex.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="javaScript/tutorial.js"></script>
+    </body>
+</html>
