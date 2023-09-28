@@ -1,0 +1,7 @@
+/bots/venv/
+/bots/users/*
+/build/
+/bots/runningGame/*
+!/bots/runningGame/RealCodeWars.py
+!/bots/users/Example
+!/bots/users/RealCodeWars.py
