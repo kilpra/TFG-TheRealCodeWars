@@ -1,6 +1,8 @@
 /bots/venv/
 /bots/users/*
 /build/
+/dataBases/dataBase.db
+/dataBases/users.db
 /bots/runningGame/*
 !/bots/runningGame/RealCodeWars.py
 !/bots/users/Example
